@@ -17,15 +17,31 @@ void run_test(double x, int n) {
 int main() {
     int n = 10;  // Antal termer i Taylor-serien
 
+    double pi = 3.131591;
+    
     // Test for små værdier af x
     run_test(0.0, n);
     run_test(0.1, n);
     run_test(0.5, n);
 
+
+    // Test for mellemstore værdier.
+    run_test(1, n);
+    run_test(2, n);
+    run_test(pi, n);
+
+
     // Test for større værdier af x
     run_test(5.0, n);
     run_test(10.0, n);
     run_test(100.0, n);
+
+
+
+    // Test for små neagtive værdier af x
+    run_test(-0.1 , n);
+    run_test(-0.5 , n);
+    run_test(-1 , n);
 
     return 0;
 }
